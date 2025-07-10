@@ -1,0 +1,101 @@
+/* General Dashboard Styles */
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* My Notes Section */
+.my-notes-section {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.my-notes-section:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.my-notes-section h2 {
+  margin: 0 0 1.5rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+/* Notes Table */
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.notes-table th,
+.notes-table td {
+  border: 1px solid var(--color-primary);
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.notes-table th {
+  background-color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.notes-table tbody tr:nth-child(even) {
+  background-color: var(--color-background);
+}
+
+.notes-table tbody tr:hover {
+  background-color: var(--color-primary); /* Use primary color for hover */
+  opacity: 0.8; /* Slightly transparent for hover effect */
+}
+
+/* Action Buttons */
+.notes-table .action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+}
+
+.notes-table .edit-btn {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.notes-table .edit-btn:hover {
+  background-color: #c27e2e; /* A slightly darker accent */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(216, 151, 60, 0.2);
+}
+
+.notes-table .delete-btn {
+  background-color: #dc3545; /* Standard red for delete */
+  color: var(--color-text-light);
+}
+
+.notes-table .delete-btn:hover {
+  background-color: #c82333; /* Darker red for delete */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}

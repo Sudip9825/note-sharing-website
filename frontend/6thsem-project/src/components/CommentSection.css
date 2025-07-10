@@ -1,0 +1,65 @@
+.comment-section {
+  margin-top: 2.5rem; /* Increased margin */
+  padding-top: 2rem; /* Increased padding */
+  border-top: 1px solid var(--color-primary);
+}
+
+.comment-section h4 {
+  margin-bottom: 1.5rem; /* Increased margin */
+  color: var(--color-secondary);
+  font-size: 1.5rem; /* Larger heading */
+}
+
+.comments-list .comment {
+  margin-bottom: 1.2rem; /* Increased margin */
+  padding: 1.2rem; /* Increased padding */
+  background-color: var(--color-background); /* Use background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.comment .comment-author {
+  font-weight: 600; /* Bolder author name */
+  margin-bottom: 0.4rem;
+  color: var(--color-secondary);
+}
+
+.comment p {
+  color: var(--color-text-dark);
+  line-height: 1.6; /* Improved readability */
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 0.8rem; /* Increased padding */
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 0.8rem; /* Increased margin */
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(216, 151, 60, 0.2);
+}
+
+.comment-form button {
+  padding: 0.6rem 1.2rem; /* Adjusted padding */
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.comment-form button:hover {
+  background-color: #c27e2e; /* Darker accent on hover */
+  transform: translateY(-1px);
+}
