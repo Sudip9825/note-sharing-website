@@ -1,34 +1,27 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-
-
-import notesRoutes from "./routes/notesRoutes.js";
-import { connectDB } from "./config/db.js";
-import rateLimiter from "./middleware/rateLimiter.js";
-
-dotenv.config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import notesRoutes from './routes/notesRoutes.js';
+import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+app.use(cors());
 
+// Serve static files from the 'uploads' directory
+app.use('/uploads', express.static('uploads'));
 
-//middleware
-app.use(cors({
-    origin: "http://localhost:5173",
-}));
-app.use (express.json());
-app.use(rateLimiter);
+// Connect to MongoDB
+mongoose.connect('mongodb+srv://sushantadhikari09_db_user:vGdnu6N6xvA2GLRf@cluster0.pup8msr.mongodb.net/note_db?retryWrites=true&w=majority&appName=Cluster0', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.error(err));
 
+// Routes
+app.use('/api/notes', notesRoutes);
 
+// Start server
+app.listen(5002, () => console.log('Server running on port 5002'));
 
-app.use("/api/notes", notesRoutes);
-
-connectDB().then(() =>{
-
-    app.listen(PORT, ()=> {
-        console.log("Server started on PORT:",PORT);
-    });
-
-});
 
