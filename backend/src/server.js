@@ -22,6 +22,8 @@ mongoose.connect('mongodb+srv://sushantadhikari09_db_user:vGdnu6N6xvA2GLRf@clust
 app.use('/api/notes', notesRoutes);
 
 // Start server
-app.listen(5002, () => console.log('Server running on port 5002'));
+const PORT = process.env.PORT || 5002;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
