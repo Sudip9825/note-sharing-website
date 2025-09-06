@@ -1,9 +1,0 @@
-.app-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: var(--color-secondary);
-  border-top: 1px solid var(--color-primary);
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
